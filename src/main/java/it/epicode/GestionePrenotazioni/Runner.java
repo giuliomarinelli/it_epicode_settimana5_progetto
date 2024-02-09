@@ -91,6 +91,32 @@ public class Runner implements CommandLineRunner {
 //
 //
 //        postazioneSvc.saveMany(p1, p2, p3, p4, p5);
+
+//          Utente u1 = new Utente();
+//          u1.setNomeCompleto("Mario Rossi");
+//          u1.setEmail("mario@rossi.mr");
+//          u1.setUsername("marietto");
+//          Utente u2 = new Utente();
+//          u2.setNomeCompleto("Marta Mongo");
+//          u2.setEmail("marta@tussa.com");
+//          u1.setUsername("marta91");
+//          Utente u3 = new Utente();
+//          u3.setNomeCompleto("Maria Erm");
+//          u3.setEmail("violetta@gmail.com");
+//          u3.setUsername("viola");
+//          Utente u4 = new Utente();
+//          u4.setNomeCompleto("Valentina Nerd");
+//          u4.setEmail("vivi@icloud.com");
+//          u4.setUsername("vivi92");
+//          Utente u5 = new Utente();
+//          u5.setNomeCompleto("Chiara Gas");
+//          u5.setEmail("cg93@gmail.com");
+//          u5.setUsername("chiara_occhi_bl6");
+//          Utente u6 = new Utente();
+//          u6.setNomeCompleto("Giuseppe Verdi");
+//          u6.setEmail("beppev@hotmail.it");
+//          u6.setUsername("beppeverdi");
+//          utenteSvc.saveMany(u1, u2, u3, u4, u5, u6);
 //
 //        prenotazioneSvc.effettuaPrenotazione(LocalDate.now(), utenteSvc.findById("7f1356b9-0606-4a7c-a19b-4d060a2e72f2"),
 //                postazioneSvc.findById("92e30003-76f1-49cc-b862-1a0220728821"));
