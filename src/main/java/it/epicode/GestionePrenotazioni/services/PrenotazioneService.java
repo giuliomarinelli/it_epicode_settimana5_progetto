@@ -47,6 +47,8 @@ public class PrenotazioneService {
         Prenotazione prenotazione = new Prenotazione();
         prenotazione.setDataPrenotazione(data);
         prenotazione.setPostazione(p);
+        logger.info("Prenotazione dell'utente " + u.getNomeCompleto() + " effettuata con successo per la data " + data + " per la postazione " +
+                p.getDescrizione() + " nell'edificio " + p.getEdificio().getNome() + ", " + p.getEdificio().getIndirizzo());
         try {
             prenotazioneRp.save(prenotazione);
             u.getPrenotazioni().add(prenotazione);
@@ -54,8 +56,6 @@ public class PrenotazioneService {
         } catch (Exception e) {
             logger.error("Si è verificato un errore imporevisto, impossibile prenotare: " + e.getMessage());
         }
-        logger.info("Prenotazione dell'utente " + u.getNomeCompleto() + " effettuata con successo per la data " + data + " per la postazione " +
-                p.getDescrizione() + " nell'edificio " + p.getEdificio().getNome() + ", " + p.getEdificio().getIndirizzo());
 
     }
 
