@@ -28,7 +28,7 @@ public class Postazione {
     @Enumerated(EnumType.STRING)
     private TipoPostazione tipo;
 
-    int numeroMassimoOccupanti;
+    private int numeroMassimoOccupanti;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "edificio_id", nullable = false)
