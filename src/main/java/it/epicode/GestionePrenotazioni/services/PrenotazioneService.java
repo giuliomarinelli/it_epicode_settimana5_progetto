@@ -53,7 +53,7 @@ public class PrenotazioneService {
         } catch (Exception e) {
             logger.error("Si è verificato un errore imporevisto, impossibile prenotare: " + e.getMessage());
         }
-        logger.info("Prenotazione dell'utente " + u.getNomeCompleto() + " effettuata con successo in data " + data + " per la postazione " +
+        logger.info("Prenotazione dell'utente " + u.getNomeCompleto() + " effettuata con successo per la data " + data + " per la postazione " +
                 p.getDescrizione() + " nell'edificio " + p.getEdificio().getNome() + ", " + p.getEdificio().getIndirizzo());
 
     }
