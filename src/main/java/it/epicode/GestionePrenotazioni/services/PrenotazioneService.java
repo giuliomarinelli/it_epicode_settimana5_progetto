@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+
 @Service
 public class PrenotazioneService {
 
@@ -84,12 +85,11 @@ public class PrenotazioneService {
             utente.getPrenotazioni().remove(prenotazione);
             utenteRp.save(utente);
             prenotazioneRp.delete(prenotazione);
-        }
-        catch (Exception e) {
+            logger.info("La prenotazione è stata cancellata con successo");
+        } catch (Exception e) {
             logger.error(e.getMessage());
         }
 
-        logger.info("La prenotazione è stata cancellata con successo");
     }
 
 
@@ -117,18 +117,13 @@ public class PrenotazioneService {
     }
 
 
-
     public List<Prenotazione> findManyById(String... ids) {
         List<Prenotazione> le = new ArrayList<>();
-        for (String id: ids) {
+        for (String id : ids) {
             le.add(findById(id));
         }
         return le;
     }
-
-
-
-
 
 
 }
